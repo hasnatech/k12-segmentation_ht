@@ -1,0 +1,102 @@
+<h2 data-aos="fade-up">K12 Top Customers </h2>
+<div data-aos="fade-up" class="heading-line"></div>
+<div class="flex m-flex">
+  <div class="flex-1 mr-20">
+    <div class="box" data-aos="fade-up" data-aos-delay="1000">
+      <p class="num_title">TOTAL Sunny Fresh</p>
+      <p class="number">14.4MM</p>
+    </div>
+    <div class="extend-height" data-aos-delay="500">
+      <canvas baseChart [data]="pieChartData" [labels]="pieChartLabels" [chartType]="pieChartType"
+        [options]="pieChartOptions" [colors]="pieChartColors" [legend]="pieChartLegend">
+      </canvas>
+    </div>
+    <div class="table-panel" data-aos="fade-up" data-aos-delay="2000">
+      <table class="table" cellspacing="10px">
+        <tr>
+          <td></td>
+          <td><b>Volume (000)</b></td>
+          <td>% Change</td>
+        </tr>
+        <tr class="green-text">
+          <td>Broad liners</td>
+          <td> 4,908</td>
+          <td>19%</td>
+        </tr>
+        <tr class="yellow-text">
+          <td>Specialty Dist.</td>
+          <td> 3,760</td>
+          <td>-13%</td>
+        </tr>
+        <tr class="green1-text">
+          <td>Direct</td>
+          <td> 1,929
+          </td>
+          <td>-14%
+          </td>
+        </tr>
+        <tr class="orange-text">
+          <td>Contract Mgmt
+          </td>
+          <td> 1,278
+          </td>
+          <td>4%
+          </td>
+        </tr>
+        <tr>
+          <td>Misc</td>
+          <td>760</td>
+          <td>-11%
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <div class="flex-1 ml-20">
+    <div class="box red" data-aos="fade-up" data-aos-delay="1500">
+      <p class="num_title">TOTAL Shady Brook</p>
+      <p class="number">1.16MM</p>
+    </div>
+    <div class="" data-aos-delay="500">
+      <canvas baseChart [data]="pieChartData2" [labels]="pieChartLabels2" [chartType]="pieChartType"
+        [options]="pieChartOptions1" [colors]="pieChartColors2" [legend]="pieChartLegend">
+      </canvas>
+    </div>
+    <div class="table-panel" data-aos="fade-up" data-aos-delay="2500">
+      <table class="table" cellspacing="10px">
+        <tr>
+          <td></td>
+          <td>Volume (000)</td>
+          <td>% Change</td>
+        </tr>
+
+        <tr class="green-text">
+          <td>Broad liners</td>
+          <td> 264 </td>
+          <td>-24%</td>
+        </tr>
+
+        <tr class="yellow-text">
+          <td>Specialty Dist. </td>
+          <td>204</td>
+          <td>-71%</td>
+        </tr>
+
+        <tr class="green1-text">
+          <td>Direct</td>
+          <td>605</td>
+          <td>39% </td>
+        </tr>
+
+        <tr class="orange-text">
+          <td>Misc</td>
+          <td>88</td>
+          <td>-49% </td>
+        </tr>
+      </table>
+    </div>
+
+  </div>
+</div>
+
+<app-support></app-support>

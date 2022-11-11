@@ -1,0 +1,8 @@
+<div class="flex fullheight">
+  <div>
+    <app-menu></app-menu>
+  </div>
+  <div class="flex-1 overlap" [ngClass]="{'active' : service.menu == true}">
+    <router-outlet></router-outlet>
+  </div>
+</div>

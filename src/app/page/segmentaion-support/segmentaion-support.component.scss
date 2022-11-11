@@ -1,0 +1,241 @@
+@import "../../../variable.scss";
+
+.question {
+  font-size: 26px;
+  color: $primary;
+}
+@include md{
+  .full-mobile-width{
+    width: 100% ;
+  }
+  
+}
+.option {
+  display: flex;
+  
+  .choice {
+    padding: 20px;
+    position: relative;
+    cursor: pointer;
+    margin: 20px 40px;
+    border: 2px solid $blue;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 204px;
+    height: 114px;
+    border-color: $grey;
+    background: $grey;
+
+    transition: border-color 0.5s ease, background-color 0.5s ease;
+
+    @include md{
+      width: calc(100% - 80px);
+      margin: 20px
+    }
+
+    .text {
+      margin: 10px 0;
+      color: #fff;
+      font-size: 26px;
+      transition: color 0.5s ease;
+    }
+
+    .icon {
+      flex: 1;
+      text-align: left;
+    }
+
+    &.active,
+    &:hover {
+      border-color: $blue;
+      background-color: $blue;
+    }
+
+  }
+}
+
+.range {
+  display: flex;
+  margin-right: 30px;
+  cursor: pointer;
+
+  .item {
+    padding: 20px;
+    border: 1px solid $grey;
+    border-radius: 15px;
+    transition: border-color 0.5s ease, color 0.5s ease;
+    color: $grey;
+
+    .icon {
+      margin-right: 20px;
+    }
+
+    .flex:first-child {
+      margin-bottom: 10px;
+    }
+  }
+
+  .fill-primary {
+    fill: $grey;
+    transition: fill 0.5s ease;
+  }
+
+  &.active,
+  &:hover {
+    .item {
+      border-color: $blue;
+      color: $blue;
+    }
+
+    .fill-primary {
+      fill: $blue;
+    }
+  }
+}
+
+
+.select {
+  display: flex;
+  margin-right: 30px;
+  cursor: pointer;
+
+  .btn {
+    margin-right: 10px;
+    width: 44px;
+    height: 22px;
+    border: 1px solid $grey;
+    border-radius: 20px;
+    position: relative;
+    background-color: $grey;
+    transition: border-color 0.5s ease, background-color 0.5s ease;
+
+    .circle {
+      width: 20px;
+      height: 20px;
+      border-radius: 20px;
+      background-color: #fff;
+      border: 1px solid $grey;
+      position: absolute;
+      left: 1px;
+      transition: left 0.5s ease;
+    }
+  }
+
+  &.active {
+    .btn {
+      border-color: $blue;
+      background-color: $blue;
+
+      .circle {
+        left: 21px;
+      }
+    }
+  }
+
+  .text {
+    font-weight: bold;
+
+  }
+}
+
+.submit {
+  border: 1px solid $blue;
+  border-radius: 20px;
+  padding: 10px 30px;
+  background-color: $blue;
+  margin: 20px 0;
+  color: #fff;
+  font-size: 18px;
+  outline: 0;
+  cursor: pointer;
+}
+
+.line-panel {
+  display: grid;
+  place-content: center;
+
+  .line {
+    height: 150px;
+    width: 1px;
+    background-color: $blue;
+    margin-right: 80px;
+  }
+}
+
+
+.solution {
+  border-radius: 10px;
+  background-color: $blue;
+  color: #fff;
+  padding: 20px;
+  //width: 250px;
+  margin: 20px 0;
+
+}
+
+.table {
+
+
+  table {
+    width: 100%;
+    border: 1px solid #EEE;
+  }
+
+  tr {
+    td {
+      border: 1px solid #EEE;
+      width: calc(100% / 6);
+    }
+  }
+}
+
+
+.tab {
+  display: none;
+
+  //border:1px solid #333;
+  .tab-header {
+    display: flex;
+
+    .tab-item {
+      background-color: #bacddd;
+      border-radius: 5px 5px 0 0;
+      flex: 1;
+      text-align: center;
+      padding: 15px;
+      margin-right: 2px;
+      cursor: pointer;
+      transition: background-color 0.5s ease;
+
+      &:last-child {
+        margin-right: 0px;
+      }
+
+      &.active,
+      &:hover {
+        background-color: #005F86;
+        color: #FFF;
+      }
+    }
+  }
+
+  .tab-body {
+    padding: 20px;
+    border: 2px solid #005F86;
+  }
+
+  .bg-green1,
+  .bg-yellow,
+  .bg-orange,
+  .bg-red {
+    color: #fff;
+  }
+}
+
+
+@include md{
+  .item{
+    margin-bottom: 10px;
+  }
+}

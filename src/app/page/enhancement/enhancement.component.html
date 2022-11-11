@@ -1,0 +1,169 @@
+<div class="enhancement" *ngIf="this.step == 1">
+  <h2 data-aos="fade-up">Distributor & Buying Group Segmentation</h2>
+  <p data-aos="fade-up" class="green-text mt-0">(Customers who are NOT end users)</p>
+  <div data-aos="fade-up" class="heading-line"></div>
+  <br><br>
+
+  <div class="flex">
+    <div>
+      <div class="question" data-aos="fade-up">
+        01. Select the size of annual revenue
+      </div>
+      <div class="option flex m-flex" data-aos="fade-up" data-aos-delay="500">
+        <div class="choice" (click)="choice(0)" [ngClass]="{ 'active' :selectedQues == 0 }">
+          <div class="icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="57" height="58" viewBox="0 0 57 58">
+              <g id="_1billion" data-name="1billion" transform="translate(-572 -288)">
+                <path class="fill-primary" id="Icon_awesome-coins" data-name="Icon awesome-coins"
+                  d="M0,28.5v3C0,33.982,6.047,36,13.5,36S27,33.982,27,31.5v-3c-2.9,2.046-8.212,3-13.5,3S2.9,30.544,0,28.5ZM22.5,9C29.953,9,36,6.982,36,4.5S29.953,0,22.5,0,9,2.018,9,4.5,15.047,9,22.5,9ZM0,21.122V24.75c0,2.482,6.047,4.5,13.5,4.5S27,27.232,27,24.75V21.122c-2.9,2.391-8.22,3.628-13.5,3.628S2.9,23.513,0,21.122Zm29.25.773C33.279,21.115,36,19.666,36,18V15a17.267,17.267,0,0,1-6.75,2.426ZM13.5,11.25C6.047,11.25,0,13.767,0,16.875S6.047,22.5,13.5,22.5,27,19.983,27,16.875,20.953,11.25,13.5,11.25Zm15.42,3.959c4.219-.759,7.08-2.25,7.08-3.959v-3c-2.5,1.765-6.785,2.714-11.3,2.939A7.874,7.874,0,0,1,28.92,15.209Z"
+                  transform="translate(572 288)" />
+                <path class="fill-primary" id="Icon_awesome-coins-2" data-name="Icon awesome-coins"
+                  d="M0,28.5v3C0,33.982,6.047,36,13.5,36S27,33.982,27,31.5v-3c-2.9,2.046-8.212,3-13.5,3S2.9,30.544,0,28.5ZM22.5,9C29.953,9,36,6.982,36,4.5S29.953,0,22.5,0,9,2.018,9,4.5,15.047,9,22.5,9ZM0,21.122V24.75c0,2.482,6.047,4.5,13.5,4.5S27,27.232,27,24.75V21.122c-2.9,2.391-8.22,3.628-13.5,3.628S2.9,23.513,0,21.122Zm29.25.773C33.279,21.115,36,19.666,36,18V15a17.267,17.267,0,0,1-6.75,2.426ZM13.5,11.25C6.047,11.25,0,13.767,0,16.875S6.047,22.5,13.5,22.5,27,19.983,27,16.875,20.953,11.25,13.5,11.25Zm15.42,3.959c4.219-.759,7.08-2.25,7.08-3.959v-3c-2.5,1.765-6.785,2.714-11.3,2.939A7.874,7.874,0,0,1,28.92,15.209Z"
+                  transform="translate(593 310)" />
+              </g>
+            </svg>
+          </div>
+          <div class="text">+ $1 Billon </div>
+        </div>
+        <div class="choice" (click)="choice(1)" [ngClass]="{ 'active' :selectedQues == 1 }" data-aos="fade-up"
+          data-aos-delay="1000">
+          <div class="icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="55" height="40.75" viewBox="0 0 55 40.75">
+              <g id="_99million" data-name="99million" transform="translate(-571 -291.25)">
+                <path class="fill-primary" id="Icon_awesome-coins" data-name="Icon awesome-coins"
+                  d="M0,28.5v3C0,33.982,6.047,36,13.5,36S27,33.982,27,31.5v-3c-2.9,2.046-8.212,3-13.5,3S2.9,30.544,0,28.5ZM22.5,9C29.953,9,36,6.982,36,4.5S29.953,0,22.5,0,9,2.018,9,4.5,15.047,9,22.5,9ZM0,21.122V24.75c0,2.482,6.047,4.5,13.5,4.5S27,27.232,27,24.75V21.122c-2.9,2.391-8.22,3.628-13.5,3.628S2.9,23.513,0,21.122Zm29.25.773C33.279,21.115,36,19.666,36,18V15a17.267,17.267,0,0,1-6.75,2.426ZM13.5,11.25C6.047,11.25,0,13.767,0,16.875S6.047,22.5,13.5,22.5,27,19.983,27,16.875,20.953,11.25,13.5,11.25Zm15.42,3.959c4.219-.759,7.08-2.25,7.08-3.959v-3c-2.5,1.765-6.785,2.714-11.3,2.939A7.874,7.874,0,0,1,28.92,15.209Z"
+                  transform="translate(590 296)" />
+                <path class="fill-primary" id="Icon_awesome-coins-2" data-name="Icon awesome-coins"
+                  d="M0,28.5v3C0,33.982,6.047,36,13.5,36S27,33.982,27,31.5v-3c-2.9,2.046-8.212,3-13.5,3S2.9,30.544,0,28.5Zm0-7.376V24.75c0,2.482,6.047,4.5,13.5,4.5S27,27.232,27,24.75V21.122c-2.9,2.391-8.22,3.628-13.5,3.628S2.9,23.513,0,21.122ZM13.5,11.25C6.047,11.25,0,13.767,0,16.875S6.047,22.5,13.5,22.5,27,19.983,27,16.875,20.953,11.25,13.5,11.25Z"
+                  transform="translate(571 280)" />
+              </g>
+            </svg>
+
+
+          </div>
+          <div class="text">$999 Million to $5 Million</div>
+        </div>
+        <div class="choice" (click)="choice(2)" [ngClass]="{ 'active' :selectedQues == 2 }" data-aos="fade-up"
+          data-aos-delay="1500">
+          <div class="icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36">
+              <path class="fill-primary" id="_5million" data-name="5million"
+                d="M0,28.5v3C0,33.982,6.047,36,13.5,36S27,33.982,27,31.5v-3c-2.9,2.046-8.212,3-13.5,3S2.9,30.544,0,28.5ZM22.5,9C29.953,9,36,6.982,36,4.5S29.953,0,22.5,0,9,2.018,9,4.5,15.047,9,22.5,9ZM0,21.122V24.75c0,2.482,6.047,4.5,13.5,4.5S27,27.232,27,24.75V21.122c-2.9,2.391-8.22,3.628-13.5,3.628S2.9,23.513,0,21.122Zm29.25.773C33.279,21.115,36,19.666,36,18V15a17.267,17.267,0,0,1-6.75,2.426ZM13.5,11.25C6.047,11.25,0,13.767,0,16.875S6.047,22.5,13.5,22.5,27,19.983,27,16.875,20.953,11.25,13.5,11.25Zm15.42,3.959c4.219-.759,7.08-2.25,7.08-3.959v-3c-2.5,1.765-6.785,2.714-11.3,2.939A7.874,7.874,0,0,1,28.92,15.209Z" />
+            </svg>
+          </div>
+          <div class="text">less than $5 Million</div>
+        </div>
+      </div>
+
+      <div *ngIf="this.selectedQues !== -1" data-aos="fade-up">
+        <div class="question">
+          02. Select the Specific or not
+        </div>
+
+        <div data-aos="fade-up" data-aos-delay="500">
+          <div class="flex mt-20">
+            <div class="option" (click)="specific(0)" [ngClass]="{ 'active' :selectedSpecific == 0 }">
+              <div class="btn">
+                <div class="circle"></div>
+              </div>
+              <div class="text">Not K12 Specific</div>
+            </div>
+
+            <div class="option" (click)="specific(1)" [ngClass]="{ 'active' :selectedSpecific == 1 }">
+              <div class="btn">
+                <div class="circle"></div>
+              </div>
+              <div class="text">Focus on K12</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <!--   -->
+      <div *ngIf="this.selectedSpecific != -1" data-aos="fade-up">
+        <div>
+          <div class="flex mt-20">
+            <div class="select" (click)="freedomClick()" [ngClass]="{ 'active' :freedom == 1 }">
+              <div class="btn">
+                <div class="circle"></div>
+              </div>
+              <div class="flex-1">
+                <div class="text">{{freedomText}} Freedom to Purchase</div>
+                <div class="subtext">
+                  {{freedomSubText}}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+      </div>
+
+      <button class="submit" data-aos="fade-up" *ngIf="this.showAnswer != true && this.selectedSpecific != -1"
+        (click)="showAnswer = true">Submit</button>
+      <div class="instruction mt-20" *ngIf="this.showAnswer == true">Change the value to know more</div>
+    </div>
+    <div *ngIf="this.showAnswer == true" data-aos="fade-right" class="line-panel">
+      <div class="line"></div>
+    </div>
+
+    <!-- *ngIf="this.showAnswer == true" -->
+    <div *ngIf="this.showAnswer == true" data-aos="fade-right" data-aos-delay="500"
+      class="solution {{ansArr[selectedQues][selectedSpecific][freedom].color}}">
+      <div class="panel flex">
+        <div class="flex-1">
+          <div class="position">
+            {{ansArr[selectedQues][selectedSpecific][freedom].number}}
+          </div>
+        </div>
+        <div class="text-panel">
+          <div class="title">
+            {{ansArr[selectedQues][selectedSpecific][freedom].title}}
+          </div>
+          <div class="text" [innerHTML]="ansArr[selectedQues][selectedSpecific][freedom].subtext">
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- <div class="continue" *ngIf="this.showAnswer == true" (click)="step=2; this.showAnswer = false">
+    <button>Continue</button>
+  </div> -->
+</div>
+
+<div *ngIf="step == 2">
+  <h2 data-aos="fade-up">School Districts & Contract Management Segmentation</h2>
+  <p data-aos="fade-up" class="green-text mt-0">(Customers who are NOT end users)</p>
+  <div data-aos="fade-up" class="heading-line"></div>
+  <br><br>
+  <!-- <div class="continue" (click)="step=1">
+    <button>Back</button>
+  </div> -->
+  <app-school-dist [(data)]="this.showAnswer"></app-school-dist>
+  <div class="flex" *ngIf="this.showAnswer == true" data-aos="fade-up" data-aos-delay="3000">
+    <div class="continue mr-10">
+      <button (click)="step=1; this.showAnswer = false">Back</button>&nbsp;
+    </div>
+    <div class="continue">
+      <button (click)="step=3; this.showAnswer = false">Continue</button>
+    </div>
+  </div>
+</div>
+<div *ngIf="step == 3">
+  <h2 data-aos="fade-up">Customer Segmentation Support</h2>
+  <div data-aos="fade-up" class="heading-line"></div>
+  <app-segmentaion-support [(data)]="this.showAnswer"></app-segmentaion-support>
+  <div class="flex" *ngIf="this.showAnswer == true" data-aos="fade-up" data-aos-delay="3000">
+    <div class="continue">
+      <button (click)="step=2; this.showAnswer = false">Back</button>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="space-100"></div>

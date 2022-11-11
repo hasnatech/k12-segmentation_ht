@@ -1,0 +1,38 @@
+<div class="menu" [ngClass]="{'active' : service.menu == true}">
+  <div class="side-menu">
+    <div class="flex flex-col fullheightper">
+      <div class="flex">
+        <div class="flex-1">
+          <a routerLink="">
+            <!-- <img src="assets/images/logo_white.png" alt="Logo"> -->
+          </a>
+
+        </div>
+        <!-- *ngIf="service.smallscreen == true" -->
+        <div class="menu-icon" (click)="service.menu = !service.menu" >
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </div>
+      </div>
+      <div class="flex-1 menu-text" [ngClass]="{'active' : service.menu == true}">
+        <ul class="nav">
+          <li routerLinkActive='active'><a routerLink="customer-segmentation">Customer Segmentation</a></li>
+          <li routerLinkActive='active'><a routerLink="important-of-segmentation">K-12 Footprint by Region</a></li>
+          <li routerLinkActive='active'><a routerLink="process">K-12 Top Customers</a></li>
+          <li routerLinkActive='active'><a routerLink="enhancement">How to Determine Segmentation </a>
+            <ul>
+              <li routerLinkActive='active'><a routerLink="enhancement">Distributors & Buying Groups</a></li>
+              <li routerLinkActive='active'><a routerLink="school-contract">School Districts & Contract Mgmt</a></li>
+            </ul>
+          </li>
+          <!-- <li routerLinkActive='active'><a routerLink="enhancement">Business Enhancement</a></li> -->
+          <li routerLinkActive='active'><a routerLink="customer-support">Customer Support</a></li>
+        </ul>
+      </div>
+      <div class="footer menu-text" [ngClass]="{'active' : service.menu == true}">
+        ©copyright 2021 by Organization.com
+      </div>
+    </div>
+  </div>
+</div>

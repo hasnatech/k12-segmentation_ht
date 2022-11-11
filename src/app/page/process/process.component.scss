@@ -1,0 +1,43 @@
+@import "../../../variable";
+.box {
+  padding: 20px 50px;
+  margin: 20px;
+  color: #fff;
+  text-align: center;
+
+  .num_title {
+    margin: 0;
+    font-size: 14px;
+  }
+
+  .number {
+    margin: 0;
+    font-size: 26px;
+    font-weight: bold;
+  }
+
+  background-color: #E37C1D;
+}
+
+.red {
+  background-color: #AC2641;
+}
+
+.table-panel {
+  margin: 20px;
+  font-weight: bold;
+  border: 1px solid #ccc;border-radius: 5px;
+  min-height: 210px;
+
+  .table {
+    width: 100%;
+
+  }
+}
+
+
+@include md {
+  .extend-height{
+    height: 600px;
+  }
+}

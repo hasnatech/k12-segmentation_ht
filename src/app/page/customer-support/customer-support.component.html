@@ -1,0 +1,39 @@
+<div>
+  <h2 data-aos="fade-up">Customer Segmentation Support</h2>
+  <div data-aos="fade-up" data-aos-delay="500" class="heading-line"></div>
+
+  <app-segmentaion-support [(data)]="this.showAnswer"></app-segmentaion-support>
+
+  <br><br>
+  <div class="instruction underline" *ngIf="showAnswer" data-aos="fade-up" data-aos-delay="1000" (click)="hide = false">Show full view</div>
+  <br><br>
+  <div class="tab-body scrollable-x" *ngIf="hide == false">
+    <div class="table">
+      <table cellspacing="0" cellpadding=10>
+        <tr>
+          <td>Dist/BG</td>
+          <td class="bg-green1">Influential Leaders</td>
+          <td class="bg-yellow">Multi-Segment Partners</td>
+          <td class="bg-orange">Large but Limited</td>
+          <td class="bg-red">&nbsp;</td>
+          <td class="bg-grey" rowspan="2">Opportunistic
+          </td>
+        </tr>
+        <tr>
+          <td class="">School</td>
+          <td class="bg-green1">Super Simple</td> 
+          <td class="bg-yellow">Mid Simple</td>
+          <td class="bg-orange">Mega Value</td>
+          <td class="bg-red">Mid Value</td>
+        </tr>
+
+        <tr *ngFor="let row of this.tab">
+          <td *ngFor="let item of row">
+            <div [innerHtml]="item"></div>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <div class="space-100"></div>
+</div>

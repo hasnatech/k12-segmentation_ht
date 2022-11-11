@@ -1,0 +1,28 @@
+<h2 data-aos="fade-up">K12 Footprint by Region</h2>
+<div data-aos="fade-up" class="heading-line"></div>
+<div class="flex fcenter m-flex">
+  <div class="flex-1 mr-20">
+    <h3>&nbsp;</h3>
+    <div class="chart" data-aos-delay="500">
+      <canvas baseChart [datasets]="barChartData" [labels]="barChartLabels" [options]="barChartOptions"
+        [legend]="barChartLegend" [chartType]="barChartType">
+      </canvas>
+    </div>
+    <div class="flex fcenter m-flex">
+      <div class="box" data-aos="fade-up" data-aos-delay="1000">
+        <p class="num_title">TOTAL Sunny Fresh</p>
+        <p class="number">14.4MM</p>
+      </div>
+      <div class="box" data-aos="fade-up" data-aos-delay="1500">
+        <p class="num_title">TOTAL Shady Brook</p>
+        <p class="number">1.16MM</p>
+      </div>
+    </div>
+  </div>
+  <div class="flex-1  ml-20" data-aos="fade-up" data-aos-delay="750">
+    <div class="center">
+      <h3>% Total 12Mo Volume by Market</h3>
+    </div>
+    <img class="full-width-img " src="assets/images/us map.png" alt="Map">
+  </div>
+</div>

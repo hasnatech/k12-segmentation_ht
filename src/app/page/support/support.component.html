@@ -1,0 +1,37 @@
+<!-- <h2 data-aos="fade-up">K12 Footprint by Region</h2>
+<div data-aos="fade-up" class="heading-line"></div> -->
+<div class="flex m-flex" >
+  <div class="flex-1 mr-20">
+    <h3 data-aos="fade-up" data-aos-delay="1500">Top Customer Volume</h3>
+    <div class="barchart" data-aos="fade-up" data-aos-delay="500">
+      <canvas baseChart [datasets]="barChartData" [labels]="barChartLabels" [options]="barChartOptions"
+        [legend]="barChartLegend" [chartType]="barChartType">
+      </canvas>
+    </div>
+
+  </div>
+  <div class="flex-1  ml-20" data-aos="fade-up" data-aos-delay="750">
+    <div class="center">
+      <h3>&nbsp;</h3>
+    </div>
+    <div class="table-panel">
+      <table  data-aos="fade-up" class="table" cellspacing="0px" cellpadding="5px">
+        <tr>
+          <th>Customer</th>
+          <th>Shady Brook Farms</th>
+          <th>Sunny Fresh</th>
+        </tr>
+        <tr *ngFor="let item of barChartLabels; let i = index ">
+          <td>{{item}}</td>
+          <td class="align-right">{{barChartData[0].data[i] | number}}</td>
+          <td class="align-right">{{barChartData[1].data[i] | number}}</td>
+        </tr>
+        <tr>
+          <th>Grand Total</th>
+          <th class="align-right">{{SumofShady | number}}</th>
+          <th class="align-right">{{SumofSunny | number}}</th>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>

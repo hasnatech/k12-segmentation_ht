@@ -1,0 +1,137 @@
+<!-- <h2 data-aos="fade-up">Customer Segmentation Support</h2>
+<div data-aos="fade-up" class="heading-line"></div> -->
+<div data-aos="fade-up" data-aos-delay="500" class="instruction">
+  <p>Click the below tab to learn more.</p>
+</div>
+
+
+<div class="flex" data-aos="fade-up" data-aos-delay="1000">
+  <div class="full-mobile-width">
+    <div class="question" data-aos="fade-up">
+      01. Select a option
+    </div>
+    <div class="option flex m-flex" data-aos="fade-up" data-aos-delay="1500">
+      <div class="choice" (click)="choice(0)" [ngClass]="{ 'active' :selectedQues == 0 }">
+        <div class="icon">
+          <img src="assets/images/ki.png" alt="KI">
+        </div>
+        <div class="text">KI</div>
+      </div>
+      <div class="choice" (click)="choice(1)" [ngClass]="{ 'active' :selectedQues == 1 }" data-aos="fade-up"
+        data-aos-delay="1000">
+        <div class="icon">
+          <img src="assets/images/sales.png" alt="Sales">
+        </div>
+        <div class="text">Sales</div>
+      </div>
+      <div class="choice" (click)="choice(2)" [ngClass]="{ 'active' :selectedQues == 2 }" data-aos="fade-up"
+        data-aos-delay="1500">
+        <div class="icon">
+          <img src="assets/images/marketing.png" alt="Marketing">
+        </div>
+        <div class="text">Marketing
+
+        </div>
+      </div>
+    </div>
+
+    <div *ngIf="this.selectedQues !== -1" data-aos="fade-up">
+      <div class="question">
+        02. Select the range of customer
+      </div>
+
+      <div data-aos="fade-up" data-aos-delay="500">
+        <div class="flex m-flex mt-20">
+          <div class="range" *ngFor="let item of options; let i = index" (click)="specific(i)"
+            [ngClass]="{ 'active' :selectedSpecific == i }">
+            <div class="item">
+              <div class="flex">
+                <div class="icon" *ngIf="item.text2">
+                  <svg *ngIf="item.text1" xmlns="http://www.w3.org/2000/svg" width="17.778" height="16"
+                    viewBox="0 0 17.778 16">
+                    <path class="fill-primary"
+                      d="M11.889,8.056V4.5H3v16H20.778V8.056ZM6.556,18.722H4.778V16.944H6.556Zm0-3.556H4.778V13.389H6.556Zm0-3.556H4.778V9.833H6.556Zm0-3.556H4.778V6.278H6.556Zm3.556,10.667H8.333V16.944h1.778Zm0-3.556H8.333V13.389h1.778Zm0-3.556H8.333V9.833h1.778Zm0-3.556H8.333V6.278h1.778ZM19,18.722H11.889V16.944h1.778V15.167H11.889V13.389h1.778V11.611H11.889V9.833H19Zm-1.778-7.111H15.444v1.778h1.778Zm0,3.556H15.444v1.778h1.778Z"
+                      transform="translate(-3 -4.5)" /></svg>
+                </div>
+                <div class="text">{{item.text1}}</div>
+              </div>
+
+              <div class="flex">
+                <div class="icon">
+                  <svg *ngIf="item.text2" xmlns="http://www.w3.org/2000/svg" width="18.667" height="16"
+                    viewBox="0 0 18.667 16">
+                    <path class="fill-primary"
+                      d="M5.646,13.55V17.1l5.938,3.4,5.937-3.4V13.55l-5.937,3.4ZM11.583,4.5,2.25,9.833l9.333,5.333L19.221,10.8v6.142h1.7V9.833Z"
+                      transform="translate(-2.25 -4.5)" /></svg>
+
+                </div>
+                <div class="text">{{item.text2}}</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div *ngIf="this.selectedSpecific !== -1">
+
+      <ng-container *ngFor="let x of this.ansArr; let i = index">
+        <ng-container *ngFor="let y of x; let j = index">
+          <div class="solution" *ngIf="this.selectedQues == i && selectedSpecific == j" [innerHTML]="y"
+            data-aos="fade-up"></div>
+        </ng-container>
+      </ng-container>
+
+    </div>
+
+    <div class="instruction mt-20" *ngIf="this.selectedSpecific !== -1">Change the value to know more</div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+<div class="tab " data-aos="fade-up" data-aos-delay="1000">
+  <div class="tab-header">
+    <div class="tab-item" (click)="selectedTab = 0" [ngClass]="{'active' : selectedTab == 0}">KI</div>
+    <div class="tab-item" (click)="selectedTab = 1" [ngClass]="{'active' : selectedTab == 1}">Organization Sales</div>
+    <div class="tab-item" (click)="selectedTab = 2" [ngClass]="{'active' : selectedTab == 2}">Organization Marketing
+    </div>
+  </div>
+
+  <div class="tab-body">
+    <div class="table">
+      <table cellspacing="0" cellpadding=10>
+        <tr>
+          <td>Dist/BG</td>
+          <td class="bg-green1">Influential Leaders</td>
+          <td class="bg-yellow">Multi-Segment Partners</td>
+          <td class="bg-orange">Large but Limited</td>
+          <td class="bg-red">&nbsp;</td>
+          <td class="bg-grey" rowspan="2">Opportunistic
+          </td>
+        </tr>
+        <tr>
+          <td class="">School</td>
+          <td class="bg-green1">Super Simple</td>
+          <td class="bg-yellow">Mid Simple</td>
+          <td class="bg-orange">Mega Value</td>
+          <td class="bg-red">Mid Value</td>
+        </tr>
+
+        <tr>
+          <td *ngFor="let item of this.tab[this.selectedTab]">
+            <div [innerHtml]="item"></div>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>

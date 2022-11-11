@@ -1,0 +1,30 @@
+.min-height {
+  min-height: 400px;
+}
+
+.clickable {
+  h3 {
+    cursor: pointer;
+    color: #d8e1eb;
+
+    &.active {
+      color: #005F86;
+    }
+  }
+
+}
+
+.click-body {
+  background-image: url('../../../assets/images/dotted.png');
+  background-position: bottom right;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  border-radius: 20px;
+
+  .text {
+    padding: 20px;
+  }
+}
+
+

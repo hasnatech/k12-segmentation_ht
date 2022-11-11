@@ -1,0 +1,41 @@
+.barchart {
+  canvas {
+    width: 100% !important;
+    height: 500px !important;
+
+  }
+}
+
+
+.table-panel {
+  margin: 20px;
+  //border: 1px solid #ccc;
+
+  .table {
+    width: 100%;
+    font-size: 14px;
+
+    .align-right {
+      text-align: right;
+    }
+
+    tr:nth-child(odd) {
+      background-color: #d8e1eb;
+    }
+
+    tr:nth-child(even) {
+      background-color: #9dbad0;
+    }
+
+    th,
+    td {
+      //border: 1px solid #ccc;
+    }
+
+
+
+    th {
+      text-align: left;
+    }
+  }
+}

@@ -1,0 +1,43 @@
+<h2 data-aos="fade-up">K12 Segmentation</h2>
+<div data-aos="fade-up" class="heading-line"></div>
+<div>
+  <div class="flex fcenter m-flex">
+    <div class="flex-1" data-aos="fade-up" data-aos-delay="500">
+      <h3>What is Customer Segmentation?</h3>
+      <p>Customer segmentation is the process of dividing customers into groups based on common characteristics so
+        companies can market to each group effectively and appropriately.</p>
+      <p>In business-to-business marketing, a company might segment customers according to a wide range of factors,
+        including:</p>
+      <ul>
+        <li>Industry</li>
+        <li>Number of employees</li>
+        <li>Products previously purchased from the company</li>
+        <li>Location</li>
+      </ul>
+    </div>
+    <div class="flex-1" data-aos="fade-up" data-aos-delay="1000">
+      <img class="full-width-img" src="assets/images/segmentation.png" alt="Segmentation">
+    </div>
+  </div>
+</div>
+
+<div>
+  <div class="instruction" data-aos="fade-up" data-aos-delay="250">
+    Click below topic to know more.
+  </div>
+  <div class="min-height flex m-flex">
+    <div class="mr-20 clickable" data-aos="fade-up" data-aos-delay="500">
+      <h3 class="" [ngClass]="{'active' : selectedItem == 0}" (click)="selectedItem = 0">Why Segment Customers?
+      </h3>
+      <h3 class="" [ngClass]="{'active' : selectedItem == 1}" (click)="selectedItem = 1"> Why do we need to
+        update our strategy?</h3>
+      <h3 class="" [ngClass]="{'active' : selectedItem == 2}" (click)="selectedItem = 2"> What we need from you?</h3>
+    </div>
+    <div class="flex-1" data-aos="fade-up" data-aos-delay="1000">
+      <div class="click-body">
+        <div class="text" [innerHtml]="body[selectedItem]"></div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="space-100"></div>

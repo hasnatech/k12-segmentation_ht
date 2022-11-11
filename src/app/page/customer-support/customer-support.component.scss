@@ -1,0 +1,38 @@
+@import "../../../variable.scss";
+.table {
+  table {
+    width: 100%;
+    border: 1px solid #EEE;
+  }
+
+  tr {
+    td {
+      border: 1px solid #EEE;
+      width: calc(100% / 6);
+    }
+  }
+}
+
+.bg-green1,
+.bg-yellow,
+.bg-orange,
+.bg-red {
+  color: #fff;
+}
+
+
+.hide{
+  display: none;
+}
+
+.underline{
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+@include md{
+  .scrollable-x{
+    overflow-x: auto;
+    width: calc(100vw - 80px);
+  }
+}

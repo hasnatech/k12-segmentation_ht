@@ -1,0 +1,144 @@
+/* You can add global styles to this file, and also import other style files */
+@import "./variable.scss";
+
+html,
+body {
+  height: 100%;
+  //overflow: hidden;
+}
+
+body {
+  //border: 2px solid red;
+  max-width: 100%;
+  margin: 0 auto;
+  //overflow: auto;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+}
+
+
+.medium-font {
+  font-size: 22px;
+}
+
+.flex {
+  display: flex;
+
+  @include md{
+    &.m-flex{
+      flex-direction: column;
+    }
+    &.w-flex{
+      flex-wrap: wrap;
+    }
+  
+  }
+
+  &.flex-col {
+    flex-direction: column;
+  }
+
+  &.fcenter {
+    justify-content: center;
+    align-items: center;
+  }
+
+
+
+  .flex-1 {
+    flex: 1;
+  }
+}
+
+.center-grid {
+  display: grid;
+  place-items: center;
+  min-height: calc(100% - 40px);
+}
+
+.center {
+  text-align: center;
+}
+
+h1 {
+  font-size: 60px;
+  color: $primary;
+}
+
+h2 {
+  font-size: 48px;
+  color: $primary;
+  margin-bottom: 10px;
+}
+
+
+.heading-line {
+  width: 100px;
+  height: 5px;
+  background-color: $primary;
+}
+
+h3 {
+  font-size: 28px;
+  color: $primary;
+}
+
+p,
+li {
+  line-height: 24px;
+}
+
+.rounded-btn {
+  border-radius: 20px;
+  padding: 10px 30px;
+  background-color: $primary;
+  border: 0;
+  color: #fff;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.mt-20 {
+  margin-top: 20px;
+}
+
+.mr-20 {
+  margin-right: 20px;
+}
+
+.ml-20 {
+  margin-left: 20px;
+}
+
+.full-width-img {
+  max-width: 100%;
+}
+
+
+.space-100 {
+  height: 100px;
+}
+
+
+::-webkit-scrollbar-track {
+  background-color: #E5EFF3;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  background-color: #E5EFF3;
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  width: 5px;
+  background-color: $primary;
+}
+
+.instruction {
+  font-size: 14px;
+  font-style: italic;
+  color: $primary;
+}
+
